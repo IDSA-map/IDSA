@@ -104,7 +104,8 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="1687FA4F-197F-4577-9D24-F5B589DAD4CB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#heartbeat-svg {
+	<tw-storydata name="index" startnode="1" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="1687FA4F-197F-4577-9D24-F5B589DAD4CB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+#heartbeat-svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -113,6 +114,9 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   max-width: 800px;
   z-index: 999;
 }
+
+border: 1px solid red;
+background: rgba(255, 0, 0, 0.2);
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"><img src="HAL2025/wholesea.jpg" usemap="#imagemap" style="width:100%; max-width:800px;" />
 
 <map name="imagemap">
@@ -175,25 +179,29 @@ IDSAです。
   requestAnimationFrame(animateDot);
 &lt;/script&gt;
 
-&lt;img src=&quot;HAL2025/1.jpg&quot; alt=&quot;1&quot; style=&quot;width:100%; max-width:600px;&quot;&gt;</tw-passagedata><tw-passagedata pid="3" name="wholemap" tags="" position="625,350" size="100,100">&lt;div style=&quot;position: relative; width: 100%; max-width: 1000px; margin: auto;&quot;&gt;
-  &lt;!-- 背景画像を貼る（Base64でもOK） --&gt;
-  &lt;img src=&quot;wholesea.jpg&quot; alt=&quot;Map&quot; style=&quot;width: 100%; display: block;&quot;&gt;
+&lt;img src=&quot;HAL2025/1.jpg&quot; alt=&quot;1&quot; style=&quot;width:100%; max-width:600px;&quot;&gt;</tw-passagedata><tw-passagedata pid="3" name="wholemap" tags="" position="625,350" size="100,100">&lt;!-- パッセージの本文に直接これを置く --&gt;
 
-  &lt;!-- Zulphiark にジャンプ --&gt;
-  &lt;a href=&quot;javascript:Engine.play(&#39;branch1_1_3&#39;)&quot;
-     style=&quot;position: absolute; top: 33%; left: 55%; width: 18%; height: 10%; transform: translate(-50%, -50%);&quot;
-     title=&quot;Zulphiark&quot;&gt;&lt;/a&gt;
+&lt;div style=&quot;position: relative; width: 100%; max-width: 1000px; margin: auto;&quot;&gt;
+  &lt;img src=&quot;HAL2025/wholesea.jpg&quot; alt=&quot;Map&quot; style=&quot;width: 100%; display: block;&quot;&gt;
 
-  &lt;!-- Montej Vixy にジャンプ --&gt;
-  &lt;a href=&quot;javascript:Engine.play(&#39;branch2_1_3&#39;)&quot;
-     style=&quot;position: absolute; top: 78%; left: 26%; width: 24%; height: 10%; transform: translate(-50%, -50%);&quot;
-     title=&quot;Montej Vixy&quot;&gt;&lt;/a&gt;
+  &lt;div data-target=&quot;branch1_1_3&quot;
+       style=&quot;position: absolute; top: 20%; left: 10%; width: 10%; height: 15%; cursor: pointer;&quot;&gt;&lt;/div&gt;
 
-  &lt;!-- Cranbdowg Qis にジャンプ --&gt;
-  &lt;a href=&quot;javascript:Engine.play(&#39;branch3_1_3&#39;)&quot;
-     style=&quot;position: absolute; top: 78%; left: 74%; width: 26%; height: 10%; transform: translate(-50%, -50%);&quot;
-     title=&quot;Cranbdowg Qis&quot;&gt;&lt;/a&gt;
+  &lt;div data-target=&quot;branch2_1_3&quot;
+       style=&quot;position: absolute; top: 20%; left: 30%; width: 10%; height: 15%; cursor: pointer;&quot;&gt;&lt;/div&gt;
+
+  &lt;div data-target=&quot;branch3_1_3&quot;
+       style=&quot;position: absolute; top: 20%; left: 50%; width: 10%; height: 15%; cursor: pointer;&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
+
+&lt;&lt;script&gt;&gt;
+  const areas = document.querySelectorAll(&#39;div[data-target]&#39;);
+  areas.forEach(el =&gt; {
+    el.addEventListener(&#39;click&#39;, () =&gt; {
+      Engine.play(el.dataset.target);
+    });
+  });
+&lt;&lt;/script&gt;&gt;
 
 
 [[ズルフィへ-&gt;branch1_1_3]]
@@ -275,7 +283,7 @@ IDSAです。
       &lt;!-- 線を描くアニメーション --&gt;
       &lt;animate attributeName=&quot;stroke-dashoffset&quot; from=&quot;200&quot; to=&quot;0&quot; dur=&quot;5s&quot; fill=&quot;freeze&quot; /&gt;
       &lt;!-- 線をフェードアウト --&gt;
-      &lt;animate attributeName=&quot;opacity&quot; from=&quot;1&quot; to=&quot;0&quot; begin=&quot;1.5s&quot; dur=&quot;0.5s&quot; fill=&quot;freeze&quot; /&gt;
+      &lt;animate attributeName=&quot;opacity&quot; from=&quot;1&quot; to=&quot;0&quot; begin=&quot;4.6s&quot; dur=&quot;0.5s&quot; fill=&quot;freeze&quot; /&gt;
     &lt;/path&gt;
   &lt;/svg&gt;
 &lt;/div&gt;
@@ -285,38 +293,29 @@ IDSAです。
 
 こちらIDSA構成員のギャルです。聞こえていますか？
 
-&lt;div style=&quot;display: flex; justify-content: center; align-items: center; height: 100vh;&quot;&gt;
-  &lt;svg width=&quot;80%&quot; height=&quot;150&quot; viewBox=&quot;0 -25 100 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-    &lt;!-- ぼかしフィルター --&gt;
-    &lt;defs&gt;
-      &lt;filter id=&quot;blur&quot;&gt;
-        &lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;0.7&quot; /&gt;
-      &lt;/filter&gt;
-    &lt;/defs&gt;
+&lt;div style=&quot;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%;&quot;&gt;
+  &lt;svg viewBox=&quot;0 -25 100 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;path d=&quot;M 0 0 L 10 0 L 13 -7 L 16 0 L 19 -21 L 22 0 L 25 14 L 28 0 L 31 7 L 34 0 L 37 -7 L 40 0 L 43 14 L 46 0 L 49 -21 L 52 0 L 55 7 L 58 0 L 61 -7 L 64 0 L 67 14 L 70 0 L 73 7 L 76 0 L 79 -14 L 82 0 H 92&quot;
+      fill=&quot;none&quot;
+      stroke=&quot;limegreen&quot;
+      stroke-width=&quot;1.5&quot;
+      stroke-linecap=&quot;round&quot;
+      stroke-dasharray=&quot;200&quot;
+      stroke-dashoffset=&quot;200&quot;
+      opacity=&quot;0.3&quot;&gt; &lt;!-- 薄く --&gt;
 
-    &lt;path id=&quot;heartbeatPath&quot;
-          d=&quot;M 0 0 
-             L 8 0 
-             L 10 -10 L 12 0 
-             L 14 -20 L 16 0 
-             L 18 15 L 20 0 
-             L 22 10 L 24 0 
-             L 26 -10 L 28 0 
-             L 30 15 L 32 0 
-             L 34 -20 L 36 0 
-             L 38 10 L 40 0 
-             L 42 -10 L 44 0 
-             L 46 15 L 48 0 
-             L 50 10 L 52 0 
-             L 54 -15 L 56 0 
-             H 70&quot;
-          stroke=&quot;lime&quot; stroke-width=&quot;1.5&quot; fill=&quot;none&quot;
-          filter=&quot;url(#blur)&quot;
-          stroke-dasharray=&quot;200&quot; stroke-dashoffset=&quot;200&quot;&gt;
-      &lt;!-- 線を描くアニメーション --&gt;
-      &lt;animate attributeName=&quot;stroke-dashoffset&quot; from=&quot;200&quot; to=&quot;0&quot; dur=&quot;4s&quot; fill=&quot;freeze&quot; /&gt;
-      &lt;!-- 線をフェードアウト --&gt;
-      &lt;animate attributeName=&quot;opacity&quot; from=&quot;1&quot; to=&quot;0&quot; begin=&quot;2s&quot; dur=&quot;0.5s&quot; fill=&quot;freeze&quot; /&gt;
+      &lt;!-- 線をなぞる --&gt;
+      &lt;animate attributeName=&quot;stroke-dashoffset&quot;
+               from=&quot;200&quot; to=&quot;0&quot;
+               dur=&quot;2s&quot;
+               fill=&quot;freeze&quot; /&gt;
+
+      &lt;!-- 残像の薄い線をさらに徐々に消す（左から）--&gt;
+      &lt;animate attributeName=&quot;opacity&quot;
+               from=&quot;0.3&quot; to=&quot;0&quot;
+               begin=&quot;2s&quot;
+               dur=&quot;1s&quot;
+               fill=&quot;freeze&quot; /&gt;
     &lt;/path&gt;
   &lt;/svg&gt;
 &lt;/div&gt;
