@@ -179,38 +179,24 @@ IDSAです。
   requestAnimationFrame(animateDot);
 &lt;/script&gt;
 
-&lt;img src=&quot;HAL2025/1.jpg&quot; alt=&quot;1&quot; style=&quot;width:100%; max-width:600px;&quot;&gt;</tw-passagedata><tw-passagedata pid="3" name="wholemap" tags="" position="625,350" size="100,100">&lt;!-- パッセージの本文に直接これを置く --&gt;
+&lt;img src=&quot;HAL2025/1.jpg&quot; alt=&quot;1&quot; style=&quot;width:100%; max-width:600px;&quot;&gt;</tw-passagedata><tw-passagedata pid="3" name="wholemap" tags="" position="625,350" size="100,100">&lt;div style=&quot;position: relative; width: 100%; max-width: 800px; margin: 0 auto;&quot;&gt;
+  &lt;img src=&quot;HAL2025/wholesea.jpg&quot; alt=&quot;マップ&quot; style=&quot;width: 100%; display: block;&quot;&gt;
 
-&lt;div style=&quot;position: relative; width: 100%; max-width: 1000px; margin: auto;&quot;&gt;
-  &lt;img src=&quot;HAL2025/wholesea.jpg&quot; alt=&quot;Map&quot; style=&quot;width: 100%; display: block;&quot;&gt;
+  &lt;div onclick=&quot;Engine.play(&#39;Branch1_1_3&#39;)&quot;
+       style=&quot;position: absolute; top: 48.6%; left: 56.2%; width: 20.0%; height: 7.6%; cursor: pointer; border: 2px solid red; background-color: rgba(255, 0, 0, 0.3);&quot;&gt;&lt;/div&gt;
 
-  &lt;div data-target=&quot;branch1_1_3&quot;
-       style=&quot;position: absolute; top: 20%; left: 10%; width: 10%; height: 15%; cursor: pointer;&quot;&gt;&lt;/div&gt;
+  &lt;div onclick=&quot;Engine.play(&#39;Branch2_1_3&#39;)&quot;
+       style=&quot;position: absolute; top: 96.5%; left: 15.9%; width: 25.2%; height: 7.7%; cursor: pointer; border: 2px solid blue; background-color: rgba(0, 0, 255, 0.3);&quot;&gt;&lt;/div&gt;
 
-  &lt;div data-target=&quot;branch2_1_3&quot;
-       style=&quot;position: absolute; top: 20%; left: 30%; width: 10%; height: 15%; cursor: pointer;&quot;&gt;&lt;/div&gt;
-
-  &lt;div data-target=&quot;branch3_1_3&quot;
-       style=&quot;position: absolute; top: 20%; left: 50%; width: 10%; height: 15%; cursor: pointer;&quot;&gt;&lt;/div&gt;
+  &lt;div onclick=&quot;Engine.play(&#39;Branch3_1_3&#39;)&quot;
+       style=&quot;position: absolute; top: 96.5%; left: 68.9%; width: 31.1%; height: 7.7%; cursor: pointer; border: 2px solid green; background-color: rgba(0, 255, 0, 0.3);&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;&lt;script&gt;&gt;
-  const areas = document.querySelectorAll(&#39;div[data-target]&#39;);
-  areas.forEach(el =&gt; {
-    el.addEventListener(&#39;click&#39;, () =&gt; {
-      Engine.play(el.dataset.target);
-    });
-  });
-&lt;&lt;/script&gt;&gt;
+&lt;p&gt;
+  探検する海を選んでください
+&lt;/p&gt;
 
-&lt;div onclick=&quot;Engine.play(&#39;branch1_1_3&#39;)&quot; 
-     style=&quot;position: absolute; top: 30%; left: 20%; width: 20%; height: 20%; background-color: rgba(255,255,255,0.1); cursor: pointer;&quot;&gt;
-&lt;/div&gt;
-
-
-[[ズルフィへ-&gt;branch1_1_3]]
-[[もへ-&gt;branch2_1_3]]
-[[くへ-&gt;branch3_1_3]]</tw-passagedata><tw-passagedata pid="4" name="branch1_1_3" tags="" position="625,500" size="100,100">〜ズルフィアーク海　中・深層〜
+[[テスト用：ズルフィへ-&gt;branch1_1_3]]</tw-passagedata><tw-passagedata pid="4" name="branch1_1_3" tags="" position="575,575" size="100,100">〜ズルフィアーク海　中・深層〜
 
 こちらIDSA構成員のしっふぃーです。聞こえていますか？
 
