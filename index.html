@@ -129,57 +129,7 @@ IDSAです。
 潜水艦を７隻用意いたしました。
 探索を始めてください。
 
-&lt;img src=&quot;HAL2025/IDSA.jpg&quot; alt=&quot;IDSA基地&quot; style=&quot;width:100%; max-width:600px;&quot;&gt;</tw-passagedata><tw-passagedata pid="2" name="music" tags="" position="450,500" size="100,100">&lt;svg id=&quot;heartbeat-svg&quot; width=&quot;800&quot; height=&quot;200&quot; viewBox=&quot;0 -30 40 60&quot;&gt;
-  &lt;!-- パスは非表示 --&gt;
-  &lt;path id=&quot;heartbeat-path&quot;
-        d=&quot;M 0 0 L 10 0 L 13 -7 L 16 0 L 19 -21 L 22 0 L 25 14 L 28 0 L 38 0&quot;
-        stroke=&quot;none&quot;
-        fill=&quot;none&quot; /&gt;
-&lt;/svg&gt;
-
-&lt;script&gt;
-  const svg = document.getElementById(&quot;heartbeat-svg&quot;);
-  const path = document.getElementById(&quot;heartbeat-path&quot;);
-  const pathLength = path.getTotalLength();
-
-  let startTime = null;
-  const duration = 2000; // 2秒
-  const trailInterval = 40; // ミリ秒ごとに残像を残す
-  const trailFadeDuration = 600; // 残像の寿命（ミリ秒）
-
-  function createDot(x, y, opacity = 1) {
-    const dot = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
-    dot.setAttribute(&quot;cx&quot;, x);
-    dot.setAttribute(&quot;cy&quot;, y);
-    dot.setAttribute(&quot;r&quot;, 1);
-    dot.setAttribute(&quot;fill&quot;, &quot;#00FF66&quot;);
-    dot.setAttribute(&quot;opacity&quot;, opacity);
-    dot.style.filter = &quot;blur(1.5px)&quot;;
-    svg.appendChild(dot);
-
-    // 自動でフェードアウトして削除
-    setTimeout(() =&gt; {
-      dot.remove();
-    }, trailFadeDuration);
-  }
-
-  function animateDot(timestamp) {
-    if (!startTime) startTime = timestamp;
-    const elapsed = timestamp - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-
-    const point = path.getPointAtLength(pathLength * progress);
-    createDot(point.x, point.y, 1 - progress * 0.5); // 少しずつ透明に
-
-    if (progress &lt; 1) {
-      requestAnimationFrame(animateDot);
-    }
-  }
-
-  requestAnimationFrame(animateDot);
-&lt;/script&gt;
-
-&lt;img src=&quot;HAL2025/1.jpg&quot; alt=&quot;1&quot; style=&quot;width:100%; max-width:600px;&quot;&gt;</tw-passagedata><tw-passagedata pid="3" name="wholemap" tags="" position="625,350" size="100,100">&lt;div style=&quot;position: relative; width: 100%; max-width: 800px; margin: 0 auto;&quot;&gt;
+&lt;img src=&quot;HAL2025/IDSA.jpg&quot; alt=&quot;IDSA基地&quot; style=&quot;width:100%; max-width:600px;&quot;&gt;</tw-passagedata><tw-passagedata pid="2" name="wholemap" tags="" position="625,350" size="100,100">&lt;div style=&quot;position: relative; width: 100%; max-width: 800px; margin: 0 auto;&quot;&gt;
   &lt;img src=&quot;https://github.com/IDSA-map/IDSA/blob/main/HAL2025/wholesea.jpg?raw=true&quot; alt=&quot;マップ&quot; style=&quot;width: 100%; display: block;&quot;&gt;
 
   &lt;div data-tw-go=&quot;Branch1_1_3&quot;  style=&quot;position: absolute; top: 15%; left: 56.2%; width: 20.0%; height: 7.6%; cursor: pointer; border: 2px solid red; background-color: rgba(255, 0, 0, 0.3);&quot;&gt;&lt;/div&gt;
@@ -193,7 +143,7 @@ IDSAです。
   探検する海を選んでください
 &lt;/p&gt;
 
-[[テスト用：ズルフィへ-&gt;Branch1_1_3]]</tw-passagedata><tw-passagedata pid="4" name="Branch1_1_3" tags="" position="575,575" size="100,100">〜ズルフィアーク海　中・深層〜
+[[テスト用：ズルフィへ-&gt;Branch1_1_3]]</tw-passagedata><tw-passagedata pid="3" name="Branch1_1_3" tags="" position="575,575" size="100,100">〜ズルフィアーク海　中・深層〜
 
 こちらIDSA構成員のしっふぃーです。聞こえていますか？
 
@@ -228,14 +178,14 @@ IDSAです。
       &lt;!-- 線を描くアニメーション --&gt;
       &lt;animate attributeName=&quot;stroke-dashoffset&quot; from=&quot;200&quot; to=&quot;0&quot; dur=&quot;2s&quot; fill=&quot;freeze&quot; /&gt;
       &lt;!-- 線をフェードアウト --&gt;
-      &lt;animate attributeName=&quot;opacity&quot; from=&quot;1&quot; to=&quot;0&quot; begin=&quot;2s&quot; dur=&quot;0.5s&quot; fill=&quot;freeze&quot; /&gt;
+      &lt;animate attributeName=&quot;opacity&quot; from=&quot;1&quot; to=&quot;0&quot; begin=&quot;4s&quot; dur=&quot;0.5s&quot; fill=&quot;freeze&quot; /&gt;
     &lt;/path&gt;
   &lt;/svg&gt;
 &lt;/div&gt;
 
 &lt;!-- 画像とマップの指定 --&gt;
 &lt;img src=&quot;HAL2025/1_1_3.jpg&quot; usemap=&quot;#imagemap&quot; style=&quot;width:100%; max-width:800px;&quot; /&gt;
-</tw-passagedata><tw-passagedata pid="5" name="Branch2_1_3" tags="" position="775,500" size="100,100">〜モンテッジ・ヴィクシー　中・深層〜
+</tw-passagedata><tw-passagedata pid="4" name="Branch2_1_3" tags="" position="775,500" size="100,100">〜モンテッジ・ヴィクシー　中・深層〜
 
 こちらIDSA構成員のシンテンノウです。聞こえていますか？
 
@@ -276,7 +226,7 @@ IDSAです。
 &lt;/div&gt;
 
 &lt;img src=&quot;HAL2025/2_1_3.jpg&quot; usemap=&quot;#imagemap&quot; style=&quot;width:100%; max-width:800px;&quot; /&gt;
-</tw-passagedata><tw-passagedata pid="6" name="Branch3_1_3" tags="" position="925,500" size="100,100">〜クランブドーグ・キス　中・深層〜
+</tw-passagedata><tw-passagedata pid="5" name="Branch3_1_3" tags="" position="925,500" size="100,100">〜クランブドーグ・キス　中・深層〜
 
 こちらIDSA構成員のギャルです。聞こえていますか？
 
