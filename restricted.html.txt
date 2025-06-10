@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクセス制限</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>アクセスできません</h1>
+        <p>申し訳ありませんが、当サイトは20歳以上の方のみご利用いただけます。</p>
+        <p style="margin-top: 30px;"><a href="/">年齢確認ページに戻る</a></p>
+    </div>
+</body>
+</html>
