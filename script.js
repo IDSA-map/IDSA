@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 「はい」ボタンがクリックされた時の処理
     confirmButton.addEventListener('click', () => {
         // ロイヤルハウスホールドの紹介ページ (royal.html) に直接遷移
-        const nextPageUrl = 'royal.html';
+        const nextPageUrl = 'royel.html';
         window.location.href = nextPageUrl;
     });
 
